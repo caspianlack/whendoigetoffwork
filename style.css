@@ -1,0 +1,201 @@
+:root {
+    --bg: #c0c0c0;
+    --panel: #d4d0c8;
+    --border-dark: #404040;
+    --border-light: #ffffff;
+    --border-mid: #808080;
+    --text: #000000;
+    --button-face: #d4d0c8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Remove modern effects */
+.background-glow {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    padding: 16px;
+}
+
+/* Window frame */
+.calculator-card {
+    background: var(--panel);
+    padding: 20px;
+    border-top: 2px solid var(--border-light);
+    border-left: 2px solid var(--border-light);
+    border-right: 2px solid var(--border-dark);
+    border-bottom: 2px solid var(--border-dark);
+}
+
+/* Title */
+.header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: #333;
+}
+
+/* Inputs */
+.input-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+label {
+    font-size: 12px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 6px;
+    font-size: 13px;
+    border-top: 2px solid var(--border-dark);
+    border-left: 2px solid var(--border-dark);
+    border-right: 2px solid var(--border-light);
+    border-bottom: 2px solid var(--border-light);
+    background: white;
+    outline: none;
+}
+
+/* Toggle buttons */
+.toggle-group {
+    display: flex;
+    gap: 4px;
+}
+
+.toggle-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+    background: var(--button-face);
+    border-top: 2px solid var(--border-light);
+    border-left: 2px solid var(--border-light);
+    border-right: 2px solid var(--border-dark);
+    border-bottom: 2px solid var(--border-dark);
+    cursor: pointer;
+}
+
+.toggle-btn:active,
+.toggle-btn.active {
+    border-top: 2px solid var(--border-dark);
+    border-left: 2px solid var(--border-dark);
+    border-right: 2px solid var(--border-light);
+    border-bottom: 2px solid var(--border-light);
+}
+
+/* Primary button */
+.primary-btn {
+    width: 100%;
+    padding: 8px;
+    font-size: 13px;
+    background: var(--button-face);
+    border-top: 2px solid var(--border-light);
+    border-left: 2px solid var(--border-light);
+    border-right: 2px solid var(--border-dark);
+    border-bottom: 2px solid var(--border-dark);
+    cursor: pointer;
+}
+
+.primary-btn:active {
+    border-top: 2px solid var(--border-dark);
+    border-left: 2px solid var(--border-dark);
+    border-right: 2px solid var(--border-light);
+    border-bottom: 2px solid var(--border-light);
+}
+
+/* Result box (sunken panel) */
+/* Bubu GIF Panel */
+.bubu-panel {
+    margin-bottom: 16px;
+    padding: 10px;
+    background: #ffffff;
+    border-top: 2px solid var(--border-dark);
+    border-left: 2px solid var(--border-dark);
+    border-right: 2px solid var(--border-light);
+    border-bottom: 2px solid var(--border-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+}
+
+#bubu-gif {
+    max-width: 100%;
+    max-height: 100px;
+    image-rendering: pixelated;
+}
+
+.result-container {
+    margin: 16px 0;
+    padding: 12px;
+    background: white;
+    border-top: 2px solid var(--border-dark);
+    border-left: 2px solid var(--border-dark);
+    border-right: 2px solid var(--border-light);
+    border-bottom: 2px solid var(--border-light);
+    text-align: center;
+}
+
+.result-label {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.result-time {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.result-countdown {
+    font-size: 12px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 16px;
+    font-size: 11px;
+    text-align: center;
+}
+
+/* Remove rounded corners everywhere */
+* {
+    border-radius: 0 !important;
+}
+
+#hrmin-input-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.hidden {
+    display: none !important;
+}

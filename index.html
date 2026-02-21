@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock-Out Calculator | When Do I Get Off Work?</title>
+    <meta name="description"
+        content="A simple and elegant tool to calculate your finish time based on your clock-in time, shift length, and break duration.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-glow"></div>
+    <main class="container">
+        <header class="header">
+            <h1 id="main-title">Clock-Out Calculator</h1>
+            <p class="subtitle">When does Bubus shift end?</p>
+        </header>
+
+        <section class="calculator-card" id="calculator">
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="start-time">Clock In Time</label>
+                    <div class="input-wrapper">
+                        <input type="time" id="start-time" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="label-with-toggle">
+                        <label>Shift Length</label>
+                        <div class="toggle-group" id="shift-type-toggle">
+                            <button type="button" class="toggle-btn active" data-type="decimal">Decimal</button>
+                            <button type="button" class="toggle-btn" data-type="hrmin">Hrs & Mins</button>
+                        </div>
+                    </div>
+
+                    <div id="decimal-input-container" class="input-wrapper">
+                        <input type="number" id="shift-hours" placeholder="e.g. 8.5" step="0.1" min="0">
+                    </div>
+
+                    <div id="hrmin-input-container" class="input-wrapper hidden">
+                        <input type="number" id="shift-h-only" placeholder="Hrs" min="0" style="flex: 1;">
+                        <input type="number" id="shift-m-only" placeholder="Mins" min="0" max="59" style="flex: 1;">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="break-minutes">Break Duration (Minutes)</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="break-minutes" placeholder="e.g. 30" min="0" required>
+                    </div>
+                </div>
+            </div>
+
+            <div id="bubu-container" class="bubu-panel">
+                <img id="bubu-gif" src="assets/gifs/bubu_sleeping.gif" alt="Bubu character status">
+            </div>
+
+            <div class="result-container" id="result-area">
+                <div class="result-label">You'll be free at:</div>
+                <div class="result-time" id="finish-time">--:--</div>
+                <div class="result-countdown" id="countdown-text">Enter your details to calculate</div>
+            </div>
+
+            <button type="button" id="calculate-btn" class="primary-btn">Calculate Time</button>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2026 WhenDoIGetOffWork. Working Hard or Hardly Working.</p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
